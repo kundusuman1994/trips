@@ -539,8 +539,8 @@ function renderMap() {
   if (!window.L) { box.innerHTML = '<p class="empty">The map could not load. Check your connection and reopen this tab.</p>'; return; }
   if (!map) {
     map = L.map(box, {zoomSnap: 0.5, worldCopyJump: true});
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {subdomains: 'abcd', maxZoom: 18,
-      attribution: '&copy; OpenStreetMap &copy; CARTO'}).addTo(map);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 18,
+      attribution: '&copy; OpenStreetMap'}).addTo(map);
     layer = L.layerGroup().addTo(map);
   }
   layer.clearLayers();
